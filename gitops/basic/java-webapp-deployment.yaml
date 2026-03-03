@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Java-Webapp
-  namespace: grade-demo
+  name: java-webapp
+  namespace: java-webapp
   labels:
-    app: Java-Webapp
+    app: java-webapp
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: Java-Webapp
+      app: java-webapp
   template:
     metadata:
       labels:
-        app: Java-Webapp
+        app: java-webapp
     spec:
       containers:
-      - name: Java-Webapp
+      - name: java-webapp
         image: abhishekf5/ultimate-cicd:22 # rslim087/kubernetes-course-grade-submission-api:stateless
         ports:
           - containerPort: 3000
