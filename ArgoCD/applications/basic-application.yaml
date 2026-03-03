@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: grade-submission
+  name: java-webapp
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/ibanoba/k8s-course-grade-submission-ap.git
+    repoURL: https://github.com/ibanoba/Jenkins-0-2Hero-GitOps.git
     targetRevision: HEAD
     path: gitops/basic
   destination:
     server: https://kubernetes.default.svc
-    namespace: grade-demo
+    namespace: java-webapp
   syncPolicy:
     automated:
       prune: true
